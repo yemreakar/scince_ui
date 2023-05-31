@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Science</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="eventemitter2.js"></script>
+    <script type="text/javascript" src="roslib.min.js"></script>
+    <script type="text/javascript" src="html2canvas.min.js"></script>
+    <script src="ros.js"></script>
+</head>
+<body>
+    <div class="slidecontainer">
+        <div class="field">
+            <div class="sliderValue"><span id="demo1"></span></div>
+            <div class="value left">Lower Hue: 0</div>
+            <input type="range" min="0" max="180" value="0" steps="1" class="slider" id="lowerHue" autocomplete="off">
+            <div class="value right">180</div>
+        </div>
+        <div class="field">
+            <div class="sliderValue"><span id="demo2"></span></div>
+            <div class="value left">Upper Hue: 0</div>
+            <input type="range" min="0" max="180" value="180" steps="1" class="slider" id="upperHue" autocomplete="off">
+            <div class="value right">180</div>
+        </div>
+        <div class="field">
+            <div class="sliderValue"><span id="demo3"></span></div>
+            <div class="value left">Lower Saturation: 0</div>
+            <input type="range" min="0" max="255" value="0" steps="1" class="slider" id="lowerSaturation" autocomplete="off">
+            <div class="value right">255</div>
+        </div>
+        <div class="field">
+            <div class="sliderValue"><span id="demo4"></span></div>
+            <div class="value left">Upper Saturation: 0</div>
+            <input type="range" min="0" max="255" value="255" steps="1" class="slider" id="upperSaturation" autocomplete="off">
+            <div class="value right">255</div>
+        </div>
+        <div class="field">
+            <div class="sliderValue"><span id="demo5"></span></div>
+            <div class="value left">Lower Value: 0</div>
+            <input type="range" min="0" max="255" value="0" steps="1" class="slider" id="lowerValue" autocomplete="off">
+            <div class="value right">255</div>
+        </div>
+        <div class="field">
+            <div class="sliderValue"><span id="demo6"></span></div>
+            <div class="value left">Upper Value: 0</div>
+            <input type="range" min="0" max="255" value="255" steps="1" class="slider" id="upperValue" autocomplete="off">
+            <div class="value right">255</div>
+        </div>
+
+    <div class="science_camera">
+        <div class="science_zoom" id="science_zoom" >
+            <img class="science_cam" src="http://localhost:8080/stream?topic=/science_image" id="cam" alt="...">
+            <canvas class="science_canvas" id="canvas" width="640" height="480"></canvas>
+        </div>
+    </div> 
+
+    <div class="camera">Camera</div> 
+
+    <!-- <div id="capture" style="padding: 10px; background: #f5da55">
+        <h4 style="color: #000; ">Hello world!</h4>
+    </div> -->
+
+    <div class="zoom_container">
+        <div class="sliderValue rectangle"><span id="zoom_value"></span></div>
+        <div class="value max">400%</div>
+        <input type="range" min="100" max="400" value="100" steps="1" class="zoom" id="zoom_slider" orient="vertical" autocomplete="off">
+        <div class="value min">100%</div>
+    </div> 
+    <div class="poly_area">
+        <p class="paraghraph">Selected Area:</p>
+        <p class="area_info" id="polygon_area">No points yet</p>
+    </div>
+    <div class="canvas_buttons">
+        <button type="button" id="clear_button"class="clear_button">Clear</button> 
+        <button type="button" id="draw_button"class="draw_button">Draw</button> 
+        <button type="button" id="screen_capture"class="screen_capture">Screen Capture</button> 
+    </div>
+
+    <!-- <script src="canvas_handler.js"> </script>  -->
+    <script src="zoom_and_pan.js"></script>
+</body>
+
+<script src="science.js"></script>
+</html>

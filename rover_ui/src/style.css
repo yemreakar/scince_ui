@@ -1,0 +1,292 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Arial', sans-serif;
+}
+
+html, body{
+  display:grid;
+  height:95%;
+  width:100%;
+  text-align:center;
+  place-items:center;
+  background:rgb(255, 255, 255);
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+.slider {
+
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 80%; /* Full-width */
+  height: 10px; /* Specified height */
+  border-radius: 5px;
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 0.9; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  border-radius: 50%; 
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  border-radius: 50%; 
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slidecontainer .field .sliderValue{
+  position: absolute;
+  height: 60px;
+  left: 50%;
+}
+.slidecontainer .field{
+  position:relative;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 50px
+}
+
+.slidecontainer .field .value{
+  position:absolute;
+  font-size:18px;
+  color: black;
+}
+.slidecontainer .field .value.left{
+  left: 1%;
+}
+.slidecontainer .field .value.right{
+  right: 8%;
+}
+
+.zoom_container{
+  position: relative;
+  top: -480px;
+  left: 75%;
+}
+
+.zoom_container .zoom{
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 15; /* Full-width */
+  height: 480px; /* Specified height */
+  border-radius: 5px;
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  position: relative;
+  display: flex;
+  
+}
+.zoom_container .zoom:hover{
+  opacity: 0.9;
+}
+
+.zoom::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  border-radius: 50%; 
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.zoom::-moz-range-thumb {
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  border-radius: 50%; 
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.zoom_container .value{
+  position:absolute;
+  font-size:18px;
+  color: black;
+}
+.zoom_container .value.max{
+  top: -25px;
+
+}
+.zoom_container .value.min{
+  top: 485px;
+}
+
+.science_camera{
+  overflow: hidden;
+  position: relative;
+  height: 480px;
+  width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.science_cam{
+  width:100%;
+  height:100%;
+  position: relative ;
+}
+.science_canvas{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+}
+
+.camera{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.science_zoom{
+  width: 640px;
+  height: 480px;
+  left: 0px;
+  top: 0px;
+  -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.button{
+  left: 25%;
+  top: 60%;
+  position: absolute;
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.button:hover{
+  opacity: 0.9;
+}
+
+.points_info{
+  left: 25%;
+  top: 70%;
+  position: absolute;
+}
+
+.canvas_buttons .draw_button{
+  left: 25%;
+  top: 50%;
+  position: absolute;
+  background-color: #04AA6D; /* Green */
+  width: 130px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+.canvas_buttons .clear_button{
+  left: 25%;
+  top: 58%;
+  position: absolute;
+  background-color: #04AA6D; /* Green */
+  width: 130px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+.canvas_buttons .screen_capture{
+  left: 25%;
+  top: 66%;
+  position: absolute;
+  background-color: #04AA6D; /* Green */
+  width: 130px;
+  border: none;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.rectangle1{
+   border-radius:4px;
+  font-size:16px;
+  padding:5px;
+  margin:5px;
+  background-color:#04AA6D;
+  opacity: 0.7
+}
+
+.canvas_buttons .screen_capture:hover{
+  opacity: 0.9;
+}
+
+.poly_area{
+  left: 25%;
+  top: 76%;
+  position: absolute;
+}
+
+.zoom_container .sliderValue {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  color: white;
+}
+.rectangle {
+  border-radius:4px;
+  font-size:16px;
+  padding:5px;
+  margin:5px;
+  background-color:#04AA6D;
+  opacity: 0.7
+}
