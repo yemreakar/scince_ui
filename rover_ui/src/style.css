@@ -80,8 +80,8 @@ html, body{
 
 .zoom_container{
   position: relative;
-  top: -480px;
-  left: 75%;
+  top: -930px;
+  left: 87%;
 }
 
 .zoom_container .zoom{
@@ -135,35 +135,15 @@ html, body{
 }
 
 .science_camera{
+  left: -30%;
+  top: 10px;
   overflow: hidden;
   position: relative;
   height: 480px;
   width: 640px;
   margin-left: auto;
   margin-right: auto;
-
 }
-
-.science_cam{
-  width:100%;
-  height:100%;
-  position: relative ;
-}
-.science_canvas{
-  width:100%;
-  height:100%;
-  position:absolute;
-  top: 0px;
-  left: 0px;
-  visibility: hidden;
-}
-
-.camera{
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .science_zoom{
   width: 640px;
   height: 480px;
@@ -176,6 +156,55 @@ html, body{
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
+}
+.science_cam{
+  width:100%;
+  height:100%;
+  position: relative ;
+}
+
+.capture{
+  left: 17%;
+  top: -455px;
+  overflow: hidden;
+  position: relative;
+  height: 480px;
+  width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.capture_zoom{
+  width: 640px;
+  height: 480px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+.capture_canvas{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  visibility: visible;
+  z-index: 1;
+}
+
+.science_canvas{
+  width:100%;
+  height:100%;
+  position:relative;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+  z-index: 2;
 }
 
 .button{
@@ -200,14 +229,14 @@ html, body{
 }
 
 .points_info{
-  left: 25%;
+  left: 40%;
   top: 70%;
   position: absolute;
 }
 
 .canvas_buttons .draw_button{
-  left: 25%;
-  top: 50%;
+  left: 40%;
+  top: 45%;
   position: absolute;
   background-color: #04AA6D; /* Green */
   width: 130px;
@@ -223,8 +252,8 @@ html, body{
   transition: opacity .2s;
 }
 .canvas_buttons .clear_button{
-  left: 25%;
-  top: 58%;
+  left: 40%;
+  top: 53%;
   position: absolute;
   background-color: #04AA6D; /* Green */
   width: 130px;
@@ -240,8 +269,25 @@ html, body{
   transition: opacity .2s;
 }
 .canvas_buttons .screen_capture{
-  left: 25%;
-  top: 66%;
+  left: 40%;
+  top: 61%;
+  position: absolute;
+  background-color: #04AA6D; /* Green */
+  width: 130px;
+  border: none;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+.canvas_buttons .download_button{
+  left: 40%;
+  top: 69%;
   position: absolute;
   background-color: #04AA6D; /* Green */
   width: 130px;
@@ -257,22 +303,21 @@ html, body{
   transition: opacity .2s;
 }
 
-.rectangle1{
-   border-radius:4px;
-  font-size:16px;
-  padding:5px;
-  margin:5px;
-  background-color:#04AA6D;
-  opacity: 0.7
-}
-
 .canvas_buttons .screen_capture:hover{
   opacity: 0.9;
 }
 
+.canvas_buttons .clear_capture:hover{
+  opacity: 0.9;
+}
+
+.canvas_buttons .download_button:hover{
+  opacity: 0.9;
+}
+
 .poly_area{
-  left: 25%;
-  top: 76%;
+  left: 40.5%;
+  top: 79%;
   position: absolute;
 }
 
@@ -282,6 +327,7 @@ html, body{
   top: 50%;
   color: white;
 }
+
 .rectangle {
   border-radius:4px;
   font-size:16px;

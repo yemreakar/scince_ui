@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="eventemitter2.js"></script>
     <script type="text/javascript" src="roslib.min.js"></script>
-    <script type="text/javascript" src="html2canvas.min.js"></script>
     <script src="ros.js"></script>
 </head>
 <body>
@@ -50,17 +49,20 @@
         </div>
 
     <div class="science_camera">
+        <h4>Camera</h4>
         <div class="science_zoom" id="science_zoom" >
             <img class="science_cam" src="http://localhost:8080/stream?topic=/science_image" id="cam" alt="...">
-            <canvas class="science_canvas" id="canvas" width="640" height="480"></canvas>
         </div>
     </div> 
 
-    <div class="camera">Camera</div> 
-
-    <!-- <div id="capture" style="padding: 10px; background: #f5da55">
-        <h4 style="color: #000; ">Hello world!</h4>
-    </div> -->
+    
+    <div class="capture" id="capture">
+        <h4>Capture</h4>
+        <div class="capture_zoom" id="capture_zoom">  
+            <canvas class="science_canvas" id="canvas" width="640" height="480"></canvas>
+            <canvas class="capture_canvas" id="capture_canvas" width="640" height="480"></canvas>  
+        </div>
+    </div>
 
     <div class="zoom_container">
         <div class="sliderValue rectangle"><span id="zoom_value"></span></div>
@@ -69,17 +71,18 @@
         <div class="value min">100%</div>
     </div> 
     <div class="poly_area">
-        <p class="paraghraph">Selected Area:</p>
+        <p class="paraghraph">Selected Length:</p>
         <p class="area_info" id="polygon_area">No points yet</p>
     </div>
     <div class="canvas_buttons">
         <button type="button" id="clear_button"class="clear_button">Clear</button> 
         <button type="button" id="draw_button"class="draw_button">Draw</button> 
         <button type="button" id="screen_capture"class="screen_capture">Screen Capture</button> 
+        <button type="button" id="download_button"class="download_button">Download</button> 
     </div>
 
-    <!-- <script src="canvas_handler.js"> </script>  -->
     <script src="zoom_and_pan.js"></script>
+    <script src="screen_capture.js"></script>
 </body>
 
 <script src="science.js"></script>
